@@ -15,7 +15,7 @@
           "options": {
             "outputPath": "dist/angular-forms",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -30,7 +30,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "server": "src/main.server.ts",
+            "server": "src/main.server.ts", 
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"

@@ -6,7 +6,9 @@
     "start": "ng serve",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:angular-forms": "node dist/angular-forms/server/server.mjs"
+    "serve:ssr": "node dist/angular-forms/server/main.js",
+    "build:ssr": "ng build --prod && ng run angular-forms:server",
+    "prerender": "ng run angular-forms:prerender"
   },
   "private": true,
   "dependencies": {
