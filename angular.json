@@ -2,6 +2,7 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+  "defaultProject": "angular-forms", 
   "projects": {
     "angular-forms": {
       "projectType": "application",
@@ -92,6 +93,5 @@
         }
       }
     }
-  },
-  "defaultProject": "angular-forms"
+  }
 }
