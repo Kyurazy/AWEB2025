@@ -1,15 +1,15 @@
 {
   "name": "angular-forms",
   "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr": "node dist/angular-forms/server/main.js",
-    "build:ssr": "ng build --prod && ng run angular-forms:server",
-    "prerender": "ng run angular-forms:prerender"
-  },
+"scripts": {
+  "ng": "ng",
+  "start": "ng serve",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test",
+  "build:ssr": "ng build --prod && ng run angular-forms:server",
+  "serve:ssr": "node dist/angular-forms/server/main.js"
+}
+,
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.1.0",

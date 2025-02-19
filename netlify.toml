@@ -1,21 +1,17 @@
-# example netlify.toml
 [build]
-  command = "sudo netlify deploy --build --prod"
-  functions = "netlify/functions"
-  publish = "dist/angular-forms/browser"
+  command = "npm run build:ssr" # The command to build the Angular app for SSR
+  functions = "netlify/functions" # This is where the SSR serverless functions will be placed
+  publish = "dist/angular-forms/browser" # The folder with your static files for the browser
 
-  ## Uncomment to use this redirect for Single Page Applications like create-react-app.
-  ## Not needed for static site generators.
-  #[[redirects]]
-  #  from = "/*"
-  #  to = "/index.html"
-  #  status = 200
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
 
-  ## (optional) Settings for Netlify Dev
-  ## https://github.com/netlify/cli/blob/main/docs/netlify-dev.md#project-detection
-  #[dev]
-  #  command = "yarn start" # Command to start your dev server
-  #  port = 3000 # Port that the dev server will be listening on
-  #  publish = "dist" # Folder with the static content for _redirect file
+[dev]
+  command = "npm run start"  # Command to start your development server
+  port = 3000               # Port that the dev server will be listening on
+  publish = "dist"           # The folder with the static content for the dev server
 
-  ## more info on configuring this file: https://ntl.fyi/file-based-build-config
+# More info on configuring this file: https://ntl.fyi/file-based-build-config
