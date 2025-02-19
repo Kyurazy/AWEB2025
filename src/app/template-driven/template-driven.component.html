@@ -1,0 +1,12 @@
+<h1>Template Driven (Sign Up) </h1>
+<div>
+    <form (ngSubmit)="onSubmit()">
+      <input class="input-box" type="text" name="username" [(ngModel)]="anytext" placeholder="Username" required />
+      <input class="input-box" type="email" name="email" [(ngModel)]="email" placeholder="Email" required />
+      <input class="input-box" type="password" name="password" [(ngModel)]="password" placeholder="Password" required />
+      <input class="input-box" type="text" name="address" [(ngModel)]="address" placeholder="Address" required />
+      <input class="btn" type="submit" value="Submit" [disabled]="!anytext || !email || !password || !address" />
+    </form>
+  </div>
+  <p *ngIf="submitted">You have entered: {{ anytext }}, {{ email }}, {{ password }}, {{ address }}</p>
+  

@@ -1,0 +1,138 @@
+<div class="form-container">
+    <h1>Student Registration</h1>
+  
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input
+          id="name"
+          class="input-box"
+          type="text"
+          formControlName="name"
+          placeholder="Enter your full name"
+        />
+        <div
+          *ngIf="loginForm.controls['name'].invalid && loginForm.controls['name'].touched"
+          class="error"
+        >
+          Name is required.
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          class="input-box"
+          type="email"
+          formControlName="email"
+          placeholder="Enter your email"
+        />
+        <div
+          *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched"
+          class="error"
+        >
+          Email is required and must be a valid email address.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          class="input-box"
+          type="password"
+          formControlName="password"
+          placeholder="Enter your password"
+        />
+        <div
+          *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched"
+          class="error"
+        >
+          Password is required and must be at least 8 characters long.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="number">Phone Number</label>
+        <input
+          id="number"
+          class="input-box"
+          type="text"
+          formControlName="number"
+          placeholder="Enter your phone number"
+        />
+        <div
+          *ngIf="loginForm.controls['number'].invalid && loginForm.controls['number'].touched"
+          class="error"
+        >
+          Phone number is required and must only contain digits.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="schoolName">School Name</label>
+        <input
+          id="schoolName"
+          class="input-box"
+          type="text"
+          formControlName="schoolName"
+          placeholder="Enter your school name"
+        />
+        <div
+          *ngIf="loginForm.controls['schoolName'].invalid && loginForm.controls['schoolName'].touched"
+          class="error"
+        >
+          School name is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="gradeLevel">Grade Level</label>
+        <select
+          id="gradeLevel"
+          class="input-box"
+          formControlName="gradeLevel"
+        >
+          <option value="">Select Grade Level</option>
+          <option value="1">Grade 1</option>
+          <option value="2">Grade 2</option>
+          <option value="3">Grade 3</option>
+          <option value="4">Grade 4</option>
+          <option value="5">Grade 5</option>
+          <option value="6">Grade 6</option>
+          <option value="7">Grade 7</option>
+          <option value="8">Grade 8</option>
+          <option value="9">Grade 9</option>
+          <option value="10">Grade 10</option>
+          <option value="11">Grade 11</option>
+          <option value="12">Grade 12</option>
+        </select>
+        <div
+          *ngIf="loginForm.controls['gradeLevel'].invalid && loginForm.controls['gradeLevel'].touched"
+          class="error"
+        >
+          Grade level is required.
+        </div>
+      </div>
+  
+      <button
+        class="btn"
+        type="submit"
+        [disabled]="loginForm.invalid"
+      >
+        Submit
+      </button>
+    </form>
+  
+    <div *ngIf="isSubmitted" class="submitted-data">
+      <h2>Submitted Data:</h2>
+      <p><strong>Full Name:</strong> {{ submittedData?.name }}</p>
+      <p><strong>Email:</strong> {{ submittedData?.email }}</p>
+      <p><strong>Phone Number:</strong> {{ submittedData?.number }}</p>
+      <p><strong>School Name:</strong> {{ submittedData?.schoolName }}</p>
+      <p><strong>Grade Level:</strong> {{ submittedData?.gradeLevel }}</p>
+    </div>
+  </div>
+  

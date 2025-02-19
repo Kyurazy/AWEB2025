@@ -1,0 +1,25 @@
+<!-- app.component.html -->
+
+<div class="app-container">
+  <header class="header">
+    <h1>Welcome to the Form Demo</h1>
+    <p>Developer: Carl Lester P. Paldeng</p>
+    <p>Section: WD-302</p>
+  </header>
+
+  <nav class="navigation">
+    <ul>
+      <li><a routerLink="/template-driven" href="/template-driven" routerLinkActive="active-link">Template Driven Form</a></li>
+      <li><a routerLink="/reactive-form"  href="/reactive-form" routerLinkActive="active-link">Reactive Form</a></li>
+      <li><a routerLink="/form-validation" href="/form-validation"routerLinkActive="active-link">Form Validation</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="footer">
+    <p>Developed by Carl Lester P. Paldeng - Section: WD-302</p>
+  </footer>
+</div>

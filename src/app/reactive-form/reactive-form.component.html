@@ -1,0 +1,89 @@
+<h1>School Sign-up (Reactive Form)</h1>
+<div class="form-container">
+  <form [formGroup]="formdata" (ngSubmit)="onClickSubmit()">
+    <div class="form-group">
+      <label for="userName">Full Name</label>
+      <input
+        id="userName"
+        class="input-box"
+        type="text"
+        formControlName="userName"
+        placeholder="Enter Your Full Name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        class="input-box"
+        type="email"
+        formControlName="email"
+        placeholder="Enter Your Email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input
+        id="phone"
+        class="input-box"
+        type="text"
+        formControlName="phone"
+        placeholder="Enter Your Phone Number"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="address">Home Address</label>
+      <input
+        id="address"
+        class="input-box"
+        type="text"
+        formControlName="address"
+        placeholder="Enter Your Address"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="schoolName">School Name</label>
+      <input
+        id="schoolName"
+        class="input-box"
+        type="text"
+        formControlName="schoolName"
+        placeholder="Enter School Name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="gradeLevel">Grade Level</label>
+      <select id="gradeLevel" class="input-box" formControlName="gradeLevel">
+        <option value="">Select Grade Level</option>
+        <option value="1">Grade 1</option>
+        <option value="2">Grade 2</option>
+        <option value="3">Grade 3</option>
+        <option value="4">Grade 4</option>
+        <option value="5">Grade 5</option>
+        <option value="6">Grade 6</option>
+        <option value="7">Grade 7</option>
+        <option value="8">Grade 8</option>
+        <option value="9">Grade 9</option>
+        <option value="10">Grade 10</option>
+        <option value="11">Grade 11</option>
+        <option value="12">Grade 12</option>
+      </select>
+    </div>
+    <button
+      class="btn"
+      type="submit"
+      [disabled]="formdata.invalid"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+
+<div *ngIf="isSubmitted">
+  <h2> Submitted Data: {{ formdata.value.userName }}, {{ formdata.value.email }}, {{ formdata.value.phone }}, {{ formdata.value.address }}, {{ formdata.value.schoolName }}, {{ formdata.value.gradeLevel }} </h2>
+</div>

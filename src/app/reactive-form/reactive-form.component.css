@@ -1,0 +1,148 @@
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 30px;
+  }
+  
+  .form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .input-box {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .input-box:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.5);
+  }
+  
+  .input-box::placeholder {
+    color: #888;
+  }
+  
+  select.input-box {
+    cursor: pointer;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+  }
+  
+  .btn:hover {
+    background-color: #218838;
+  }
+  
+  .btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .submitted-data {
+    margin-top: 20px;
+    padding: 25px;
+    background-color: #f4f7f6;
+    border: 1px solid #d3e0e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .submitted-data h2 {
+    font-size: 1.6rem;
+    color: #28a745;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .submitted-data p {
+    color: #555;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-top: 10px;
+    word-wrap: break-word;
+  }
+  
+  .submitted-data span {
+    font-weight: 600;
+    color: #28a745;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .submitted-data {
+      padding: 15px;
+    }
+  
+    .submitted-data h2 {
+      font-size: 1.4rem;
+    }
+  
+    .submitted-data p {
+      font-size: 1rem;
+    }
+  
+    .form-container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .input-box {
+      padding: 12px;
+    }
+  
+    .btn {
+      padding: 12px;
+    }
+  }  
